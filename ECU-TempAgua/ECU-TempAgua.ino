@@ -35,6 +35,7 @@ int tAceite = 0;
 int tAgua = 0;
 float volt = 0.0;
 int amp = 0;
+String estadoValvulaAireAdicional = "";
 
 void setup() {
   Serial.begin(9600);
@@ -74,11 +75,11 @@ void controlarValvulaAireAdicional(){
 }
 
 void calcularValores(){
-  pAceite = millis() / 1000;
-  tAceite = millis() / 1000;
+  pAceite = 0;
+  tAceite = 0;
   tAgua = calcularTempAgua();
-  volt = millis() / 1000.0;
-  amp = millis() / 1000;
+  volt = 0.0;
+  amp = 0;
 }
 
 void pantalla(){
